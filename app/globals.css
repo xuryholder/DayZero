@@ -183,6 +183,10 @@ a { color: inherit; text-decoration: none; }
   font-size: 17px;
 }
 
+.lz-nav-link.is-active {
+  color: #f6c28b;
+}
+
 .lz-hero {
   border: none;
   border-radius: 0;
@@ -3300,6 +3304,257 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.4;
 }
 
+.about-page {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 34px 34px !important;
+  background:
+    radial-gradient(120% 140% at 0% 0%, rgba(244, 172, 98, 0.1), transparent 42%),
+    radial-gradient(90% 120% at 100% 0%, rgba(79, 122, 197, 0.11), transparent 46%),
+    linear-gradient(180deg, rgba(14, 22, 37, 0.92), rgba(8, 14, 26, 0.98));
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.about-kicker {
+  margin: 0;
+  color: #f4ac62;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.about-title {
+  margin: 10px 0 0;
+  max-width: 13ch;
+  font-size: clamp(36px, 5vw, 62px);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+}
+
+.about-subtitle {
+  margin: 16px 0 0;
+  max-width: 760px;
+  color: rgba(224, 233, 247, 0.82);
+  font-size: 20px;
+  line-height: 1.52;
+}
+
+.about-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.about-sidecard,
+.about-why,
+.about-offerings,
+.about-beliefs,
+.about-cta {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.022);
+}
+
+.about-sidecard {
+  padding: 20px;
+  background:
+    radial-gradient(100% 120% at 100% 0%, rgba(244, 172, 98, 0.1), transparent 48%),
+    rgba(255, 255, 255, 0.028);
+}
+
+.about-sidecard-kicker {
+  margin: 0;
+  color: rgba(244, 172, 98, 0.72);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.about-sidecard-title {
+  margin: 12px 0 0;
+  font-size: 30px;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: rgba(246, 250, 255, 0.98);
+}
+
+.about-sidecard-copy {
+  margin: 12px 0 0;
+  color: rgba(214, 225, 243, 0.74);
+  font-size: 15px;
+  line-height: 1.58;
+}
+
+.about-sidecard-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.about-sidecard-tags span {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 7px 11px;
+  color: rgba(224, 233, 248, 0.74);
+  font-size: 12px;
+}
+
+.about-why,
+.about-beliefs,
+.about-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 24px;
+  margin-top: 18px;
+  padding: 24px;
+}
+
+.about-offerings {
+  margin-top: 18px;
+  padding: 22px;
+}
+
+.about-offerings-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.about-head-note {
+  margin: 0;
+  max-width: 440px;
+  color: rgba(205, 218, 239, 0.64);
+  font-size: 14px;
+  text-align: right;
+}
+
+.about-section-title {
+  margin: 10px 0 0;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.about-copy p {
+  margin: 0 0 14px;
+  color: rgba(228, 236, 249, 0.84);
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+.about-offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.about-offering-card {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.026);
+  padding: 16px;
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.about-offering-card:hover {
+  border-color: rgba(244, 172, 98, 0.24);
+  background: rgba(255, 255, 255, 0.038);
+  transform: translateY(-1px);
+}
+
+.about-offering-title {
+  margin: 0;
+  color: rgba(246, 250, 255, 0.98);
+  font-size: 24px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.about-offering-copy {
+  margin: 12px 0 0;
+  color: rgba(220, 230, 246, 0.78);
+  font-size: 15px;
+  line-height: 1.56;
+}
+
+.about-offering-link {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffb472;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.about-beliefs-list {
+  display: grid;
+  gap: 12px;
+}
+
+.about-belief {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.026);
+  padding: 14px;
+}
+
+.about-belief-dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 7px;
+  border-radius: 999px;
+  background: rgba(244, 172, 98, 0.92);
+  box-shadow: 0 0 0 4px rgba(244, 172, 98, 0.1);
+}
+
+.about-belief p {
+  margin: 0;
+  color: rgba(238, 243, 252, 0.92);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.about-cta {
+  align-items: center;
+}
+
+.about-cta-title {
+  margin: 10px 0 0;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+}
+
+.about-cta-copy {
+  margin: 12px 0 0;
+  max-width: 700px;
+  color: rgba(226, 234, 247, 0.78);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.about-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
 .manifesto-final {
   color: #f4ac62 !important;
   font-weight: 700;
@@ -3373,7 +3628,12 @@ a { color: inherit; text-decoration: none; }
   .circles-grid,
   .circles-principles,
   .circles-quotes-grid,
-  .circles-cta {
+  .circles-cta,
+  .about-hero,
+  .about-why,
+  .about-offerings-grid,
+  .about-beliefs,
+  .about-cta {
     grid-template-columns: 1fr;
   }
   .circles-cta {
@@ -3485,7 +3745,14 @@ a { color: inherit; text-decoration: none; }
     padding: 22px 18px !important;
     border-radius: 20px;
   }
+  .about-page {
+    padding: 22px 18px !important;
+    border-radius: 20px;
+  }
   .circles-subtitle {
+    font-size: 17px;
+  }
+  .about-subtitle {
     font-size: 17px;
   }
   .circles-featured,
@@ -3495,11 +3762,29 @@ a { color: inherit; text-decoration: none; }
   .circles-cta {
     padding: 18px;
   }
+  .about-sidecard,
+  .about-why,
+  .about-offerings,
+  .about-beliefs,
+  .about-cta,
+  .about-offering-card {
+    padding: 18px;
+  }
   .circles-quotes-head {
     display: block;
   }
   .circles-quotes-note {
     margin-top: 10px;
+  }
+  .about-offerings-head {
+    display: block;
+  }
+  .about-head-note {
+    margin-top: 10px;
+    text-align: left;
+  }
+  .about-cta-actions {
+    justify-content: flex-start;
   }
   .library-page {
     padding: 22px 18px !important;
