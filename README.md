@@ -332,3 +332,27 @@ Those people should not disappear.
 They should rebuild.
 
 Welcome to DayZero.
+
+---
+
+# Local Development
+
+---
+
+**Coded with Codex AI agent and Denis S**
+
+Requirements:
+- Node.js 22+
+- npm 10+
+
+Run:
+
+```bash
+cd /home/xuryholder/DayZero
+npm install
+npm run dev
+```
+
+Open:
+- http://localhost:3000/landing
+- http://localhost:3000/app
