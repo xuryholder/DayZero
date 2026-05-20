@@ -7,6 +7,31 @@ const topNav = [
   ["About", "/about"]
 ];
 
+const principles = [
+  "Anonymous participation for founders not ready to speak publicly yet.",
+  "Small, curated rooms with no audience and no personal branding pressure.",
+  "Voice-first, honest conversations about shutdown, burnout, betrayal, and identity loss.",
+  "Built for the period after collapse, when survival matters more than strategy theatre."
+];
+
+const circles = [
+  {
+    schedule: "Weekly small group",
+    title: "Quiet Circle",
+    body: "A slower room for founders coming out of burnout, silence, or emotional shutdown."
+  },
+  {
+    schedule: "Twice monthly",
+    title: "Postmortem Circle",
+    body: "Honest conversations about what actually happened inside the company and inside you."
+  },
+  {
+    schedule: "Curated admission",
+    title: "Anonymous Room",
+    body: "Voice-only space for founders who need privacy before they are ready for visibility."
+  }
+];
+
 const quotes = [
   "This was the first place where I stopped pretending everything was okay.",
   "After shutting down my startup, I disappeared for 8 months.",
@@ -34,112 +59,104 @@ export default function RecoveryCirclesPage() {
         </Link>
       </header>
 
-      <section className="manifesto-wrap mt-8">
-        <div className="manifesto-hero">
-          <p className="manifesto-kicker">Private Founder Rooms</p>
-          <h1 className="headline manifesto-title">Recovery Circles</h1>
-          <p className="manifesto-subtitle">Private conversations for founders rebuilding after collapse.</p>
-          <p className="manifesto-subtitle mt-4">
-            Not networking.
-            <br />
-            Not coaching.
-            <br />
-            Not performance.
-          </p>
-          <p className="manifesto-subtitle mt-4">
-            A place for honest conversations between people who understand what it feels like to lose something they gave everything to build.
-          </p>
-          <Link href="/app/circles" className="btn btn-primary mt-7">
-            Apply for Access →
-          </Link>
+      <section className="circles-page mt-8">
+        <div className="circles-hero">
+          <div>
+            <p className="circles-kicker">Private founder rooms</p>
+            <h1 className="headline circles-title">Recovery Circles</h1>
+            <p className="circles-subtitle">
+              Private conversations for founders rebuilding after collapse, burnout,
+              silence, and the strange identity loss that follows shutdown.
+            </p>
+            <p className="circles-subtitle">
+              Not networking. Not coaching. Not performance. Just honest rooms with
+              people who understand what survival actually feels like.
+            </p>
+          </div>
+
+          <article className="circles-featured">
+            <div className="circles-featured-top">
+              <p className="circles-featured-kicker">Access format</p>
+              <span className="circles-live-chip">Small curated groups</span>
+            </div>
+            <h2 className="circles-featured-title">A place to speak honestly before you are ready to be public again.</h2>
+            <p className="circles-featured-copy">
+              Some circles support anonymous participation and voice-only conversations,
+              so honesty becomes possible before reputation management takes over.
+            </p>
+            <div className="circles-featured-meta">
+              <span>Anonymous by default</span>
+              <span>Voice-first options</span>
+              <span>No startup theatre</span>
+            </div>
+          </article>
         </div>
 
-        <div className="manifesto-body">
-          <h2 className="headline manifesto-h2">Most founders have nobody they can speak honestly to after failure.</h2>
-          <p>Startup culture celebrates launches, funding rounds, and success stories.</p>
-          <p>But almost nobody talks about what happens after everything falls apart.</p>
-          <p>
-            The shutdown.
-            <br />
-            The burnout.
-            <br />
-            The investor silence.
-            <br />
-            The cofounder betrayal.
-            <br />
-            The months of disappearing because you no longer know who you are without the company you built.
-          </p>
-          <p>Recovery Circles were created for that moment.</p>
+        <div className="circles-grid">
+          {circles.map((circle) => (
+            <article key={circle.title} className="circles-card">
+              <p className="circles-card-schedule">{circle.schedule}</p>
+              <h2 className="circles-card-title">{circle.title}</h2>
+              <p className="circles-card-body">{circle.body}</p>
+              <button type="button" className="circles-card-link">
+                Learn more
+                <span>→</span>
+              </button>
+            </article>
+          ))}
+        </div>
 
-          <h2 className="headline manifesto-h2">Honest conversations.</h2>
-          <p>
-            About burnout, collapse, layoffs, identity loss, failed raises, pressure, loneliness, and rebuilding after failure.
-          </p>
-          <p>
-            No pitch decks.
-            <br />
-            No growth hacks.
-            <br />
-            No pretending.
-          </p>
+        <section className="circles-principles">
+          <div>
+            <p className="circles-kicker">Why this works</p>
+            <h2 className="circles-principles-title">
+              Recovery starts when performance pressure finally leaves the room.
+            </h2>
+          </div>
+          <div className="circles-principles-list">
+            {principles.map((principle) => (
+              <div key={principle} className="circles-principle">
+                <span className="circles-principle-dot" />
+                <p>{principle}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-          <h2 className="headline manifesto-h2">Anonymous by default.</h2>
-          <p>
-            Some founders are not ready to speak publicly after collapse.
-          </p>
-          <p>
-            Selected circles support anonymous participation and voice-only conversations, allowing founders to speak openly without exposing identity, reputation, or company history.
-          </p>
-          <p>Honesty becomes possible when performance disappears.</p>
-
-          <h2 className="headline manifesto-h2">Small trusted circles.</h2>
-          <p>Recovery Circles are intentionally small and curated.</p>
-          <p>
-            No audience.
-            <br />
-            No startup theater.
-            <br />
-            No personal branding.
-          </p>
-          <p>Just founders who understand what survival actually feels like.</p>
-
-          <h2 className="headline manifesto-h2">Real postmortems.</h2>
-          <p>Not polished LinkedIn lessons written after success.</p>
-          <p>
-            But honest conversations about what actually happened:
-            the mistakes, the pressure, the warning signs, the emotional cost, and the silence after the company ends.
-          </p>
-          <p>Every collapse leaves behind knowledge.</p>
-
-          <h2 className="headline manifesto-h2">Rebuilding starts after survival.</h2>
-          <p>
-            Some founders rebuild companies.
-            <br />
-            Some rebuild identity.
-            <br />
-            Some simply learn how to breathe again after years of pressure.
-          </p>
-          <p>
-            Recovery Circles exist to help founders reconnect with direction, purpose, confidence, and people who understand.
-          </p>
-
-          <h2 className="headline manifesto-h2">Founder Quotes</h2>
-          <div className="rc-quotes">
+        <section className="circles-quotes">
+          <div className="circles-quotes-head">
+            <p className="circles-kicker">Founder voices</p>
+            <p className="circles-quotes-note">
+              The things founders usually only say when they stop performing.
+            </p>
+          </div>
+          <div className="circles-quotes-grid">
             {quotes.map((quote) => (
-              <blockquote key={quote} className="rc-quote">
+              <blockquote key={quote} className="circles-quote">
                 <p>“{quote}”</p>
               </blockquote>
             ))}
           </div>
+        </section>
 
-          <h2 className="headline manifesto-h2">Startup culture teaches founders how to build companies.</h2>
-          <p>Nobody teaches them how to survive losing one.</p>
-          <p>Every failed startup leaves behind an experienced founder.</p>
-          <p className="manifesto-final">This is Day Zero.</p>
-          <Link href="/app/circles" className="btn btn-primary mt-6">
-            Apply for Access →
-          </Link>
-        </div>
+        <section className="circles-cta">
+          <div>
+            <p className="circles-kicker">Next step</p>
+            <h2 className="circles-cta-title">Find a room where you do not have to translate your collapse into a success story yet.</h2>
+            <p className="circles-cta-copy">
+              Recovery Circles exist for the part after the shutdown, when you need
+              language, witnesses, and people who understand the emotional cost of building.
+            </p>
+          </div>
+          <div className="circles-cta-actions">
+            <Link href="/app/circles" className="btn btn-primary">
+              Apply for access
+            </Link>
+            <Link href="/app/journal" className="btn btn-secondary">
+              Start privately
+            </Link>
+          </div>
+        </section>
       </section>
 
       <footer className="lz-footer mt-10">
