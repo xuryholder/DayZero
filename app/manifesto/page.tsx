@@ -7,6 +7,12 @@ const topNav = [
   ["About", "/about"]
 ];
 
+const beliefs = [
+  "Burnout should not erase talent.",
+  "Failure should not exile founders from the ecosystem.",
+  "Rebuilding should not happen alone."
+];
+
 export default function ManifestoPage() {
   return (
     <main className="main-shell landing2026 py-7 md:py-10">
@@ -16,7 +22,11 @@ export default function ManifestoPage() {
         </Link>
         <nav className="lz-nav">
           {topNav.map(([label, href]) => (
-            <Link key={label} href={href} className="lz-nav-link">
+            <Link
+              key={label}
+              href={href}
+              className={`lz-nav-link${label === "Manifesto" ? " is-active" : ""}`}
+            >
               {label}
             </Link>
           ))}
@@ -33,12 +43,15 @@ export default function ManifestoPage() {
           <p className="manifesto-subtitle">
             For founders rebuilding after collapse, burnout, betrayal, layoffs, and silence.
           </p>
+          <p className="manifesto-note">
+            A short belief system for founders trying to begin again without pretending nothing broke.
+          </p>
         </div>
 
         <div className="manifesto-body">
+          <h2 className="headline manifesto-h2">What startup culture misses</h2>
           <p>Startups celebrate beginnings.</p>
           <p>Funding rounds. Launches. Growth charts. Success stories carefully polished for the internet.</p>
-
           <p>But almost nobody talks about what happens after everything falls apart.</p>
 
           <p>
@@ -52,9 +65,11 @@ export default function ManifestoPage() {
           </p>
 
           <p>
-            Modern startup culture worships winners, while thousands of talented founders quietly disappear behind the scenes carrying invisible scars.
+            Modern startup culture worships winners, while thousands of talented founders
+            quietly disappear behind the scenes carrying invisible scars.
           </p>
 
+          <h2 className="headline manifesto-h2">Who DayZero is for</h2>
           <p>We built DayZero for them.</p>
 
           <p>
@@ -73,13 +88,29 @@ export default function ManifestoPage() {
             Sometimes it is the beginning of the real one.
           </p>
 
+          <section className="manifesto-beliefs">
+            <p className="manifesto-beliefs-kicker">Core beliefs</p>
+            <div className="manifesto-beliefs-list">
+              {beliefs.map((belief) => (
+                <div key={belief} className="manifesto-belief">
+                  <span className="manifesto-belief-dot" />
+                  <p>{belief}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <h2 className="headline manifesto-h2">Why this matters</h2>
           <p>
-            A failed startup still leaves behind experience, resilience, pattern recognition, emotional endurance, and lessons no university can teach.
-            Yet the ecosystem often treats failed founders like expired products instead of recognizing them as some of the most valuable people in innovation.
+            A failed startup still leaves behind experience, resilience, pattern recognition,
+            emotional endurance, and lessons no university can teach. Yet the ecosystem
+            often treats failed founders like expired products instead of recognizing them
+            as some of the most valuable people in innovation.
           </p>
 
           <p>
-            Many of the best operators, creators, and visionaries are people who already lost everything once and survived it.
+            Many of the best operators, creators, and visionaries are people who already
+            lost everything once and survived it.
           </p>
 
           <p>
@@ -88,14 +119,6 @@ export default function ManifestoPage() {
             A second-chance infrastructure.
             <br />
             A place where founders can speak honestly, reconnect with purpose, recover emotionally, rebuild financially, and begin again without shame.
-          </p>
-
-          <p>
-            We believe burnout should not erase talent.
-            <br />
-            Failure should not exile people from tech.
-            <br />
-            And rebuilding should not happen alone.
           </p>
 
           <p>
@@ -114,6 +137,25 @@ export default function ManifestoPage() {
 
           <p>This is not a startup graveyard.</p>
           <p className="manifesto-final">This is Day Zero.</p>
+        </div>
+
+        <div className="manifesto-cta">
+          <div>
+            <p className="manifesto-kicker">Next step</p>
+            <h2 className="headline manifesto-cta-title">Keep going with more honesty than performance.</h2>
+            <p className="manifesto-cta-copy">
+              Read founder stories, enter a recovery circle, or step quietly into the app.
+              The point is not to bounce back theatrically. The point is to begin again well.
+            </p>
+          </div>
+          <div className="manifesto-cta-actions">
+            <Link href="/app/stories" className="btn btn-primary">
+              Read founder stories
+            </Link>
+            <Link href="/recovery-circles" className="btn btn-secondary">
+              Join recovery circles
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -3271,18 +3271,26 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.35;
 }
 
+.manifesto-note {
+  margin: 16px auto 0;
+  max-width: 640px;
+  color: rgba(205, 218, 239, 0.68);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .manifesto-body {
-  margin-top: 16px;
-  max-width: 860px;
+  margin-top: 20px;
+  max-width: 780px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .manifesto-body p {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
   color: rgba(230, 238, 252, 0.9);
   font-size: 21px;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .manifesto-h2 {
@@ -3302,6 +3310,87 @@ a { color: inherit; text-decoration: none; }
   color: rgba(220, 230, 246, 0.9);
   font-size: 20px;
   line-height: 1.4;
+}
+
+.manifesto-beliefs {
+  margin: 28px 0 30px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 20px;
+  padding: 20px;
+  background:
+    radial-gradient(90% 120% at 100% 0%, rgba(244, 172, 98, 0.08), transparent 44%),
+    rgba(255, 255, 255, 0.022);
+}
+
+.manifesto-beliefs-kicker {
+  margin: 0;
+  color: rgba(244, 172, 98, 0.74);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.manifesto-beliefs-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.manifesto-belief {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.026);
+  padding: 14px;
+}
+
+.manifesto-belief-dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: rgba(244, 172, 98, 0.92);
+  box-shadow: 0 0 0 4px rgba(244, 172, 98, 0.1);
+}
+
+.manifesto-belief p {
+  margin: 0;
+  color: rgba(238, 243, 252, 0.92);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.manifesto-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  max-width: 980px;
+  margin: 28px auto 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+}
+
+.manifesto-cta-title {
+  margin: 10px 0 0;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.04;
+}
+
+.manifesto-cta-copy {
+  margin: 12px 0 0;
+  max-width: 700px;
+  color: rgba(226, 234, 247, 0.78);
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.manifesto-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .about-page {
@@ -3633,7 +3722,8 @@ a { color: inherit; text-decoration: none; }
   .about-why,
   .about-offerings-grid,
   .about-beliefs,
-  .about-cta {
+  .about-cta,
+  .manifesto-cta {
     grid-template-columns: 1fr;
   }
   .circles-cta {
@@ -3749,11 +3839,18 @@ a { color: inherit; text-decoration: none; }
     padding: 22px 18px !important;
     border-radius: 20px;
   }
+  .manifesto-wrap {
+    padding: 22px 18px !important;
+    border-radius: 20px;
+  }
   .circles-subtitle {
     font-size: 17px;
   }
   .about-subtitle {
     font-size: 17px;
+  }
+  .manifesto-note {
+    font-size: 15px;
   }
   .circles-featured,
   .circles-card,
@@ -3768,6 +3865,9 @@ a { color: inherit; text-decoration: none; }
   .about-beliefs,
   .about-cta,
   .about-offering-card {
+    padding: 18px;
+  }
+  .manifesto-beliefs {
     padding: 18px;
   }
   .circles-quotes-head {
@@ -3785,6 +3885,9 @@ a { color: inherit; text-decoration: none; }
   }
   .about-cta-actions {
     justify-content: flex-start;
+  }
+  .manifesto-cta-actions {
+    margin-top: 4px;
   }
   .library-page {
     padding: 22px 18px !important;
