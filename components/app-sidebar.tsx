@@ -5,11 +5,11 @@ import { usePathname } from "next/navigation";
 
 const mainItems = [
   ["Home", "/app"],
-  ["Recovery Circles", "/recovery-circles"],
+  ["Recovery Circles", "/app/circles"],
   ["Stories", "/app/stories"],
   ["Rebuild", "/app/rebuild"],
   ["Signals", "/app/autopsy"],
-  ["Library", "/manifesto"]
+  ["Library", "/app/library"]
 ];
 
 const lowerItems = [

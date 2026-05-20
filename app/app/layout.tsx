@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AppRightRail } from "@/components/app-right-rail";
 import { AppSidebar } from "@/components/app-sidebar";
 
 export default function AppLayout({
@@ -19,26 +20,7 @@ export default function AppLayout({
       <div className="app-shell-grid">
         <AppSidebar />
         <section className="space-y-4">{children}</section>
-        <aside className="space-y-4">
-          <div className="app-right-card app-right-sticky">
-            <div className="app-circle-head">
-              <p className="app-circle-kicker">Active Circle</p>
-              <span className="app-live-chip">Live in 3h</span>
-            </div>
-            <h3 className="app-circle-title">Shutdown Circle</h3>
-            <div className="app-circle-meta">
-              <div className="app-meta-pill">8 founders</div>
-              <div className="app-meta-pill">Anonymous enabled</div>
-            </div>
-            <div className="app-circle-mode">
-              Voice-only room
-            </div>
-            <div className="app-card-divider" />
-            <Link href="/recovery-circles" className="btn btn-primary app-enter-btn w-full justify-center">
-              Enter Circle
-            </Link>
-          </div>
-        </aside>
+        <AppRightRail />
       </div>
       <footer className="app-footer">
         <p className="text-white/55">Start again <span className="text-orange-300">from Day Zero.</span></p>
