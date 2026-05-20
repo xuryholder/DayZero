@@ -1,28 +1,32 @@
 import Link from "next/link";
 
+const topNav = [
+  ["Stories", "/app/stories"],
+  ["Manifesto", "/manifesto"],
+  ["Recovery Circles", "/recovery-circles"],
+  ["About", "/about"]
+];
+
 export default function ManifestoPage() {
   return (
-    <main className="main-shell py-8 md:py-10">
+    <main className="main-shell landing2026 py-7 md:py-10">
       <header className="lz-topbar">
         <Link href="/landing">
           <img src="/img/d0-logo.png" alt="DayZero" className="lz-logo-img" />
         </Link>
         <nav className="lz-nav">
-          <Link href="/manifesto" className="lz-nav-link">
-            Manifesto
-          </Link>
+          {topNav.map(([label, href]) => (
+            <Link key={label} href={href} className="lz-nav-link">
+              {label}
+            </Link>
+          ))}
         </nav>
-        <div className="flex items-center gap-4">
-          <Link href="/landing" className="manifesto-back">
-            ← Back
-          </Link>
-          <Link href="/app" className="btn btn-primary">
-            Open App
-          </Link>
-        </div>
+        <Link href="/app" className="btn btn-primary">
+          Join Free →
+        </Link>
       </header>
 
-      <section className="manifesto-wrap">
+      <section className="manifesto-wrap mt-8">
         <div className="manifesto-hero">
           <p className="manifesto-kicker">Manifesto</p>
           <h1 className="headline manifesto-title">This is Day Zero.</h1>
@@ -32,36 +36,33 @@ export default function ManifestoPage() {
         </div>
 
         <div className="manifesto-body">
-          <h2 className="headline manifesto-h2">What startup culture ignores</h2>
           <p>Startups celebrate beginnings.</p>
-          <p>Nobody talks about what happens after the collapse.</p>
+          <p>Funding rounds. Launches. Growth charts. Success stories carefully polished for the internet.</p>
+
+          <p>But almost nobody talks about what happens after everything falls apart.</p>
 
           <p>
             The shutdown.
             <br />
-            The layoffs.
-            <br />
             The investor silence.
             <br />
-            The co-founder betrayal.
+            The co-founder breakup.
             <br />
-            The months of disappearing from the world because you no longer know who you are without the company.
+            The months of disappearing because you no longer know who you are without the company you built.
           </p>
 
           <p>
-            Modern startup culture worships winners.
-            <br />
-            But behind every unicorn are thousands of founders carrying invisible scars.
+            Modern startup culture worships winners, while thousands of talented founders quietly disappear behind the scenes carrying invisible scars.
           </p>
 
           <p>We built DayZero for them.</p>
 
           <p>
-            Not for pitch decks.
-            <br />
-            Not for fake LinkedIn success stories.
-            <br />
             Not for hustle culture pretending burnout is ambition.
+            <br />
+            Not for fake LinkedIn optimism.
+            <br />
+            Not for people performing success while falling apart privately.
           </p>
 
           <p>DayZero exists for founders rebuilding after failure.</p>
@@ -69,62 +70,38 @@ export default function ManifestoPage() {
           <p>
             Because failure is not the end of a founder.
             <br />
-            It is often the beginning of the real one.
-          </p>
-
-          <p>A failed startup still leaves behind:</p>
-          <ul>
-            <li>experience</li>
-            <li>resilience</li>
-            <li>pattern recognition</li>
-            <li>leadership under pressure</li>
-            <li>emotional endurance</li>
-            <li>lessons no university can teach</li>
-          </ul>
-
-          <p>
-            The ecosystem treats failed founders like expired products.
-            <br />
-            We believe they are one of the most valuable resources in innovation.
+            Sometimes it is the beginning of the real one.
           </p>
 
           <p>
-            Some of the best operators, creators, and visionaries are people who already lost everything once and survived it.
+            A failed startup still leaves behind experience, resilience, pattern recognition, emotional endurance, and lessons no university can teach.
+            Yet the ecosystem often treats failed founders like expired products instead of recognizing them as some of the most valuable people in innovation.
+          </p>
+
+          <p>
+            Many of the best operators, creators, and visionaries are people who already lost everything once and survived it.
           </p>
 
           <p>
             DayZero is a recovery network.
             <br />
-            A private signal.
+            A second-chance infrastructure.
             <br />
-            A second chance infrastructure.
+            A place where founders can speak honestly, reconnect with purpose, recover emotionally, rebuild financially, and begin again without shame.
           </p>
 
-          <h2 className="headline manifesto-h2">What DayZero offers</h2>
-          <p>A place where founders can:</p>
-          <ul>
-            <li>speak honestly</li>
-            <li>recover emotionally</li>
-            <li>rebuild financially</li>
-            <li>find new teams</li>
-            <li>share postmortems</li>
-            <li>reconnect with purpose</li>
-            <li>start again without shame</li>
-          </ul>
-
-          <h2 className="headline manifesto-h2">What we believe</h2>
-          <p>We believe:</p>
-          <ul>
-            <li>burnout should not erase talent</li>
-            <li>failure should not exile people from tech</li>
-            <li>rebuilding should not happen alone</li>
-            <li>experience matters more than optics</li>
-          </ul>
+          <p>
+            We believe burnout should not erase talent.
+            <br />
+            Failure should not exile people from tech.
+            <br />
+            And rebuilding should not happen alone.
+          </p>
 
           <p>
-            The startup world needs fewer fake success stories.
+            The startup world does not need more fake success stories.
             <br />
-            And more honest conversations about survival.
+            It needs more honest conversations about survival.
           </p>
 
           <p>
@@ -154,7 +131,8 @@ export default function ManifestoPage() {
         <div className="lz-footer-links text-white/80">
           <div>
             <Link href="/manifesto">Manifesto</Link>
-            <Link href="/landing">Landing</Link>
+            <Link href="/about">About</Link>
+            <Link href="/recovery-circles">Recovery Circles</Link>
             <Link href="/app/stories">Founder Stories</Link>
           </div>
           <div>

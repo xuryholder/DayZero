@@ -1,25 +1,49 @@
-import Link from "next/link";
+"use client";
 
-const items = [
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const mainItems = [
   ["Home", "/app"],
+  ["Recovery Circles", "/recovery-circles"],
   ["Stories", "/app/stories"],
-  ["Circles", "/app/circles"],
-  ["Autopsy AI", "/app/autopsy"],
   ["Rebuild", "/app/rebuild"],
-  ["Journal", "/app/journal"],
+  ["Signals", "/app/autopsy"],
+  ["Library", "/manifesto"]
+];
+
+const lowerItems = [
+  ["Quiet Mode", "/app/journal"],
   ["Profile", "/app/profile"]
+  ,["Settings", "/app/profile"]
 ];
 
 export function AppSidebar() {
+  const pathname = usePathname();
+
   return (
-    <aside className="h-fit rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur">
-      <p className="mb-6 text-xs uppercase tracking-[0.24em] text-white/70">DAYZERO</p>
-      <nav className="flex flex-col gap-2">
-        {items.map(([label, href]) => (
+    <aside className="app-sidebar">
+      <p className="mb-2 text-xs uppercase tracking-[0.24em] text-white/50">DAY0</p>
+      <p className="mb-6 text-sm text-white/62">Quiet OS</p>
+      <nav className="flex flex-col gap-1.5">
+        {mainItems.map(([label, href]) => (
           <Link
             key={label}
             href={href}
-            className="rounded-xl border border-transparent px-3 py-2 text-sm text-white/80 transition hover:border-white/20 hover:bg-white/6 hover:text-white"
+            className={`app-nav-item ${pathname === href ? "app-nav-item-active" : ""}`}
+          >
+            {label}
+          </Link>
+        ))}
+      </nav>
+      <div className="my-4 h-px bg-white/8" />
+      <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-white/45">Personal</p>
+      <nav className="flex flex-col gap-1.5">
+        {lowerItems.map(([label, href]) => (
+          <Link
+            key={label}
+            href={href}
+            className={`app-nav-item app-nav-item-muted ${pathname === href ? "app-nav-item-active" : ""}`}
           >
             {label}
           </Link>
